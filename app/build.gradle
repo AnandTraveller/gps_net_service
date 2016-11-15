@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "testing.gps_service"
-        minSdkVersion 20
+        minSdkVersion 19
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -34,5 +34,9 @@ dependencies {
     compile 'com.android.support:support-v4:23.4.0'
 
     compile 'com.azoft.carousellayoutmanager:carousel:1.1.7'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta3'
+
+    //compile 'com.android.support:percent:25.0.1'
+
 
 }
