@@ -18,7 +18,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private Button btn_start, btn_stop;
-    private TextView textView;
+    private TextView textView, textView1;
     private BroadcastReceiver broadcastReceiver;
 
     @Override
@@ -51,6 +51,14 @@ public class MainActivity extends AppCompatActivity {
         btn_start = (Button) findViewById(R.id.button);
         btn_stop = (Button) findViewById(R.id.button2);
         textView = (TextView) findViewById(R.id.textView);
+        textView1 = (TextView) findViewById(R.id.textView1);
+
+        textView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, BasicMapDemoActivity.class));
+            }
+        });
 
         if (!runtime_permissions())
             enable_buttons();

@@ -90,6 +90,8 @@ public class GPS_Service extends Service implements LocationListener {
             if (values != null) {
                 //i.putExtra("coordinates", latitude + " " + longitude);
                 i.putExtra("coordinates", latitude + " " + longitude);
+                i.putExtra("lat", latitude);
+                i.putExtra("lng", longitude);
                 //  i.putExtra("coordinates", getLocation().getLongitude() + " " + getLocation().getLatitude());
                 sendBroadcast(i);
             }
@@ -239,8 +241,6 @@ public class GPS_Service extends Service implements LocationListener {
         }
         Toast.makeText(getApplicationContext(), " Check GPS Connection ", Toast.LENGTH_SHORT).show();
         location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-
     }
-
 
 }
